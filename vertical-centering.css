@@ -9,10 +9,20 @@ when heights are not known.
 */
 
 .element {
-	display: inline-block;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+/*
+apparently, a further update here:
+set the parent to have transform-style: preserve-3d; so that there's no blur.
+*/
+
+.parent {
+	transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
 }
 
 
