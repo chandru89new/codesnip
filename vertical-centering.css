@@ -1,0 +1,19 @@
+/*
+
+vertical centering
+http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+
+to center an element vertically in its parent container,
+when heights are not known. 
+
+*/
+
+.element {
+	display: inline-block;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+
