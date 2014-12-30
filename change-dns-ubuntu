@@ -1,0 +1,25 @@
+# to change the dns in ubuntu 14.04
+# i had problems with dns (github and archive.org weren't accessible)
+# used a global dns change from terminal, through resolvconf
+
+# i did a couple of things so i dont know which did the trick.
+
+# first add nameservers in the head of resolv.conf.d
+$ sudo nano /etc/resolvconf/resolv.conf.d/head
+
+# add this in the file and save
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+
+# next, config resolv.conf itself
+$ sudo nano /etc/resolv.conf
+
+# add the same nameservers above the existing nameserver line
+# comment out the existing nameserver like so:
+# # nameserver 127.0.1.1
+# save the file and exit 
+
+# finally, update resolvconf
+
+$ sudo resolvconf -u 
+
