@@ -1,6 +1,6 @@
 
 * {box-sizing: border-box;}
-body {width: 100%; background: #fff; font-size: 12px;}
+body {width: auto; background: #fff; font-size: 12px;}
 
 
 #container {width: 450px; margin: 5em auto; line-height: 0;
