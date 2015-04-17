@@ -1,0 +1,10 @@
+/*
+	disable touch-event highlight for links or other elements 
+	for chrome on mobile devices
+	works good on chrome for android and on emulator
+
+*/
+
+.element {
+	-webkit-tap-highlight-color: transparent;
+}

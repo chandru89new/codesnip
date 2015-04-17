@@ -1,0 +1,16 @@
+/*
+
+	enable :focus pseudoclass on div and other entities that usually do not have that feature
+	so you can use div:focus {}
+
+*/
+
+div {tabindex: 1;}
+
+/*
+
+	giving a tabindex to the div will enable div:focus
+
+	can be applied to things like article or span
+
+*/
