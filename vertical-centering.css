@@ -26,4 +26,26 @@ set the parent to have transform-style: preserve-3d; so that there's no blur.
 }
 
 
+/*
 
+	a better way to vertical center (based on experience with koovy app
+	note: this doesnt work for floated elements
+	also: this does not work if you supply a min-height value to the parent element. only height: auto; or height: x; works
+*/ 
+
+
+.parent {
+
+}
+
+.parent:before {
+	content: "";
+	display: inline-block; /*can use 'table' also but make sure the element also uses the same display value*/
+	height: 100%;
+	vertical-align: middle;
+}
+
+.element-to-be-centered {
+	display: inline-block;
+	vertical-align: middle;
+}
