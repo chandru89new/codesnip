@@ -21,12 +21,14 @@
 
 		.container {}
 
-		header {position: fixed; height: 9em; padding: 1em 1.5em; background: #CDDC39; color: #fff; width: 100%; border-bottom: 2px solid #AFB42B;}
+		header {position: fixed; min-height: 6em; height: 2em; padding: 1em 1.5em; background: #CDDC39; color: #fff; width: 100%; border-bottom: 2px solid #AFB42B;}
 		header * {transition: all 0.7s ease-in-out;}
 		header:before, header:after {content: ''; display: inline-block; height: 100%; vertical-align: middle;} 
 		header h1, h1:focus {display: inline-block; vertical-align: middle; outline: 0;} 
 
-		nav {display: none;}
+		nav {display: none; margin-top: 2em; color: #fff; position: absolute;}
+		header.menu-open nav {display: block;}
+
 		.toggler {height: 100%; float: right;}
 		.toggler:after {content: ''; display: table; clear: both;}
 		.toggler:before {content: ''; display: inline-block; height: 100%; vertical-align: middle;}
