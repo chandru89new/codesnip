@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="description ">
+    <title>Title</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="img/favicon-apple-touch.png">
+    <link rel="icon" href="img/favicon.png" sizes="32x32">
+    <!-- CSS-->
+    <style type="text/css">
+    /* imports */
+    
+    /* reset */
+    *, html, body, div, span, header, section, article, nav, footer, h1, h2, h3, h4, h5, h6, p, blockquote, a, ul, ol, li {margin: 0; padding: 0; border: 0; outline: none;}
+    html, body {height: 100%;}
+    /* box sizing */
+    * {box-sizing: border-box;}
+    
+    /* clear fix */
+    .clr:after {display: table; content: ''; clear: both;}
+    
+    /* general styles (font setup, sizes, colors, links) */
+    body {font-size: 10px; font-family: 'Gotham Book'; overflow-x: hidden; background: #666;}
+    p {font-size: 4em; letter-spacing: -2px}
+    a {}
+    
+    .antoine {background: url(antoine.jpg) center no-repeat;}
+    .tesla {background: url(tesla.jpg) center no-repeat; background-position: center !important;}
+    .twain {background: url(twain.jpg) center no-repeat;}
+
+    #parallax {
+        height: 100vh;
+        overflow-x: hidden;
+        perspective: 0.15em;
+    }
+
+    .plx_group {
+        position: relative;
+        height: 250vh;
+        transform-style: preserve-3d;
+    }
+
+    .plx_group .plx_layer {
+        position: absolute;
+        top: 0; left: 0;
+        /*padding-bottom: 10vh;*/
+    }
+
+    .plx_group .plx_layer.bottom {
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        padding: 0 0 100vh 0;
+        transform: translateZ(-2px) scale(2.5);
+        background-size: cover;
+        opacity: 0.9;
+    }
+
+    .plx_group .plx_layer.top {
+        padding: 50vh 3em;
+        text-align: center;
+        font-size: 5em; color: #000;
+        text-shadow: 0px 0px 10px rgba(255,255,255,1);
+    }
+
+    #parallax > .plx_group:last-child {
+        padding-bottom: 0;
+        height: 100vh;
+    }
+
+    .plx_group.last .top {
+        padding-bottom: 0;
+    }
+    
+
+    /* portrait mobile */
+    
+    /* landscape mobile */
+    
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script>
+      // custom script
+    </script>
+</head>
+<body>
+
+	<div id='parallax'>
+		<div class='plx_group'>
+            <div class="plx_layer bottom antoine"></div>
+            <div class='plx_layer top'>Perfection is not when there's nothing more to add but when there's nothing more to remove.</div>
+
+		</div>
+
+        <div class='plx_group'>
+            <div class="plx_layer bottom twain"></div>
+            <div class='plx_layer top'>Humor is the great thing, the saving thing. The minute it crops up, all our irritations and resentments slip away and a sunny spirit takes their place..</div>
+        </div>
+
+        <div class='plx_group last'>
+            <div class="plx_layer bottom tesla"></div>
+            <div class='plx_layer top'>The scientists of today think deeply instead of clearly. One must be sane to think clearly, but one can think deeply and be quite insane..</div>
+        </div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<title>Ripple effect v0.1</title>
+	<meta charset='utf-8' />
+	<meta name='viewport' content='width=device-width,intial-scale=1' />
+	<style type="text/css">
+	@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+
+	/* reset */
+	*, html, body, div, span, p, a {margin: 0; padding: 0; outline: 0; font-family: 'Roboto';}
+
+	body {font-size: 62.5%;}
+	/* box model */
+	* {box-sizing: border-box; -webkit-tap-highlight-color: transparent;}
+
+	#container {padding: 2em;}
+	/* button style */
+	.button {margin: 1em; user-select: none; -webkit-user-select: none; overflow: hidden; position: relative; z-index: 2; font-family: 'Roboto'; padding: 0.7em 2em; background: #fff; color: #333; font-size: 1.2em; text-transform: uppercase; border-radius: 2px; box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.3); width: auto; display: inline-block; cursor: pointer;}
+	.ripple {display: block; position: absolute; z-index: 0; top: -100%; left: 0px; background: rgba(0,0,0,0.3); transform: scale(0); border-radius: 100%; }
+	.ripple.animate {animation: ripple 0.5s ease-out; -webkit-animation: ripple 0.5s ease-out;}
+	/*.button:hover .ripple {animation: ripple 0.3s ease-out; -webkit-animation: ripple 0.4s linear;}*/
+
+
+	.button.indigo {background-color: #3F51B5; color: #fff; box-shadow: 0 0 5px rgba(100,100,100,0.6);}
+	.button.indigo .ripple {background-color: #1A237E;}
+
+	@keyframes ripple { 
+		0% {transform: scale(0);}
+		50% {transform: scale(1);}
+		99% {transform: scale(3);}
+		100% {display: none; transform: scale(0); opacity: 0;}
+	}
+
+	@-webkit-keyframes ripple {
+		0% {transform: scale(0);}
+		50% {transform: scale(1);}
+		99% {transform: scale(3);}
+		100% {display: none; transform: scale(0); opacity: 0;}
+	}
+
+	</style>
+
+	<script src='http://www.w3schools.com/jquery.js'></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		w = $('.button').css("width");
+		$('span.ripple').css({"width": w, "height": w});
+		$('.button').click(function(){
+			$('span.ripple', this).addClass('animate');
+			setTimeout(function(){
+				$('span.ripple').removeClass('animate');
+			}, 400);
+		});
+	});
+	</script>
+
+</head>
+<body>
+<div id='container'>
+	
+	<div class=button>
+		<span class=ripple></span>
+		Button
+	</div>
+
+	<div class='button indigo'>
+		Button
+		<span class=ripple></span>
+	</div>
+
+	<div class='button blue'>
+		<span class=ripple></span>
+		Button
+	</div>
+
+	<div class='button cyan'>
+		<span class=ripple></span>
+		Button
+	</div>
+
+	<div class='button teal'>
+		<span class=ripple></span>
+		Button
+	</div>
+
+	<div class='button lightgreen'>
+		<span class=ripple></span>
+		Button
+	</div>
+
+	<div class='button orange'>
+		<span class=ripple></span>
+		Button
+	</div>
+
+
+</div>
+</body>
+</html>
