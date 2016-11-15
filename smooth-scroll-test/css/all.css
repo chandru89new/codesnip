@@ -1,0 +1,24 @@
+/*
+By: Chandru (druchan.com);
+*/
+
+@import "myreset.css";
+@import "grid.css";
+@import "fonts.css";
+@import "colors.css";
+@import "helpers.css";
+
+/* apply general styles here if you want to. you can also apply general styles on 320.css and start from there (mobile-first approach). */
+
+@import "320.css";
+@import "768.css";
+@import "992.css";
+@import "1200.css";
+
+/* end */
+
+body {font-family: 'Avenir LT Std', Avenir, sans-serif; font-size: 24px; overflow: hidden; height: 100vh;}
+
+
+.scrollSection {position: absolute; top: 50px; left: 50px; width: 50vw; transition: transform 1.45s ease-out;}
+.scrollSection .testParagraph {margin-bottom: 50px; line-height: 30px;}

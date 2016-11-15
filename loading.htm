@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang='en-us'>
+<head>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Loading icons</title>
+	<style>
+		* {box-sizing: border-box;}
+		body {font-family: Avenir, "Avenir LT Std", sans-serif; background: #333; color: #fff; text-align: center;}
+		.loader {margin-top: 30px;}
+		.loader span {font-family: serif; font-size: 100px; display: inline-block; transform: scale(0);}
+		@keyframes zoomInOut {
+			from {transform: scale(0);}
+			50% {transform: scale(2);}
+			to {transform: scale(0);}
+		}
+		span.first {animation: zoomInOut 1s cubic-bezier(.43,.42,.47,.27) infinite; animation-delay: 0s;}
+		span.second {animation: zoomInOut 1s cubic-bezier(.43,.42,.47,.27) infinite; animation-delay: 0.15s;}
+		span.third {animation: zoomInOut 1s cubic-bezier(.43,.42,.47,.27) infinite; animation-delay: 0.3s; }
+	</style>
+</head>
+<body>
+<div class='loader'>
+	<span class="first">&middot;</span>
+	<span class="second">&middot;</span>
+	<span class="third">&middot;</span>
+</div>
+<!-- <div class="loader">
+	Test
+</div> -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* helper classes */
+
+.clr {clear: both;}
+.clr:after {display: table; content: ''; clear: both;}
+
+.alnCenter {text-align: center;}
+.alnLeft {text-align: left;}
+.alnRight {text-align: right;}
+
+.fltLeft {float: left;}
+.fltRight {float: right;}
+.fltNone {float: none;}
+
+.marginTop10 {margin-top: 10px;}
+.marginBottom10 {margin-bottom: 10px;}
+
+.inlineBlock {display: inline-block;}
+
+.hidden {display: none;}

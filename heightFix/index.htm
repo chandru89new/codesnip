@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang='en-us'>
+<head>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HeightFix</title>
+	<style type="text/css">
+		.parent > div {border: 1px solid #f00; margin: 20px; float: left; width: 200px;}
+	</style>
+</head>
+<body>
+	
+<div class="parent">
+	<div class="son" style="height: 100px"></div>
+	<div class="son" style="height: 150px"></div>
+	<div class="son" style="height: 300px"></div>
+	<div class="son" style="height: 700px"></div>
+	<div style="height: 200px"></div>
+	<div class="son" style="height: 200px"></div>
+	<div class="son" style="height: 120px"></div>
+	<div class="son" style="height: 170px"></div>
+	<div style="height: 100px"></div>
+	<div class="son" style="height: 150px"></div>
+	<div class="son" style="height: 70px"></div>
+	<div class="son" style="height: 300px"></div>
+</div>
+
+<script src="jquery.min.js"></script>
+
+<!-- include this plugin -->
+<script src="heightFix.js"></script>
+
+<!--
+	
+	and then call the function heightFix like so
+		$('parent element').heightFix();	
+	
+	by default, heightFix will assume that you have named your child elements 'child'
+	but if your child elements are called 'son' (sexist, yeah), just pass that param like so:
+
+		$(parent).heightFix({
+			child: '.son'
+		});
+
+	and suppose you want to fix max height instead of min:
+
+		$(parent).heightFix({
+			type: 'max'
+		});
+
+	dont forget the single quotes when giving "type" value.
+
+ -->
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$('.parent').heightFix({
+		child: '.son',
+	});
+	
+});
+</script>
+
+</body>
+</html>

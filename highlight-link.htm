@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang='en-us'>
+<head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {font-family: 'Gotham Book', Helvetica; font-size: 24px;}
+        header {position: fixed; height: 80px; width: 100%; text-align: center;}
+        section.main {height: 120vh; text-align: center; padding-top: 30vh;}
+        a.section-active {background: #000; color: #fff;}
+    </style>
+</head>
+<body>
+
+<header>
+    <a href='#one'>one</a> / 
+    <a href='#two'>two</a> / 
+    <a href='#three'>three</a> / 
+    <a href='#four'>four</a> / 
+    <a href='#five'>five</a> / 
+</header>
+
+<section class="main" id='one'>one</section>
+<section class="main" id='two'>two</section>
+<section class="main" id='three'>three</section>
+<section class="main" id='four'>four</section>
+<section class="main" id='five'>five</section>
+
+<script type="text/javascript" src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+var sections = $('section'), nav = $('header');
+
+$(window).on('scroll', function () {
+  
+  var winY = $(window).scrollTop();
+ 
+  sections.each(function() {
+    var top = $(this).offset().top - 80,
+        bottom = top + $(this).outerHeight();
+    var id = $(this).attr('id');
+
+    if (winY >= top && winY < bottom) {
+      nav.find('a').removeClass('section-active');
+      nav.find("a[href='#" +id+ "']").addClass('section-active');
+    }
+    
+  });
+});
+
+});
+
+</script>
+</body>
+</html>
