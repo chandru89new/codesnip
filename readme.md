@@ -1,11 +1,15 @@
 # READ ME
 
-This repo is a collection of small code snippets that I stumble on, use and re-use.
+Collection of small code snippets &mdash; found elsewhere and re-used (with some mods) or written new.
 
-Each snippet of code is either an unmodified or a modified version of code that was found elsewhere.
+Currently has:
 
-Comments within the snippet usually refer to / cite the source.
-
-If no source is mentioned, the code was written from various references.
-
-Ciao.
+- Animated link underline.
+- Disable touch-highlight (focus) on touch devices.
+- Enable focus on divs and other elements.
+- Highlight link/href on scrolling to a #section.
+- CSS loading animation (wip)
+- Standard code for Mailchimp forms
+- Customized reset (myreset.css) - from Eric Meyer's.
+- A pseudo-replication of Material Design's ripple effect (but this one always starts from the center of the clicked element)
+- Vertical centering css (old. Use flex these days).
