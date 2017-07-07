@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang='en-us'>
+<head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<div class="key">
+    test
+</div>
+<script src="https://unpkg.com/jquery"></script>
+<script>
+$(document).ready(function(){
+    var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split('');
+    // console.log(chars.length);
+
+    generateKey = function(){
+        var i, result = '';
+        for (i=0;i<6;i++){
+            index = Math.floor(Math.random()*(chars.length-1));
+            console.log(index);
+            result += chars[index];
+        }
+        return result;
+    };
+
+    for (k=0; k<100; k++) {
+        $('.key').append(generateKey());
+        $('.key').append('<br>');
+    }
+
+});
+</script>
+</body>
+</html>
