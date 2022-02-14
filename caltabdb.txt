@@ -1,0 +1,19 @@
+bhujia,gram,5.92
+milk,mL,0.6
+bread,unit,60
+egg,unit,80
+chapati,unit,80
+oil,tbsp,120
+oil-tsp,tsp,40
+butter,gram,10
+rice,gram,1.3
+vegetables,gram,0.7
+banana,unit,150
+apple,unit,95
+poha,gram,1.2
+mariebiscuit,unit,25
+mung,gram,3.5
+sugar,gram,4
+boost,gram,4
+milk in tfcup,cup,150
+sugar-tsp,tsp,20
