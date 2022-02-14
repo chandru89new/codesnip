@@ -15,5 +15,6 @@ mariebiscuit,unit,25
 mung,gram,3.5
 sugar,gram,4
 boost,gram,4
+boost-tsp,tsp,20
 milk in tfcup,cup,150
 sugar-tsp,tsp,20
