@@ -19,3 +19,5 @@ boost-tsp,tsp,20
 milk in tfcup,cup,150
 sugar-tsp,tsp,20
 omelette,unit,100
+pringles,unit,8
+arunbites,unit,30
