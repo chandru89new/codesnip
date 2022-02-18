@@ -24,3 +24,6 @@ pringles,unit,8
 ragi ribbon pakoda,gram,5.77
 curd,gram,0.8
 curd(200g cup),unit,160
+chikoo,piece(100g),85
+orange,piece(mid-size),55
+mini bakharwadi,gram,2.65
